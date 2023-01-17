@@ -12,7 +12,7 @@ namespace SMS.WebApp.Controllers
 {
     public class CoursesController : Controller
     {
-        private StudentManagmentSystemEntities db = new StudentManagmentSystemEntities();
+        private StudentManagmentSystemEntities2 db = new StudentManagmentSystemEntities2();
 
         // GET: Courses
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace SMS.WebApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CId,Course1,duration")] Course course)
+        public ActionResult Create([Bind(Include = "CId,Course_Tittle,Course_Code,Duration")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace SMS.WebApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CId,Course1,duration")] Course course)
+        public ActionResult Edit([Bind(Include = "CId,Course_Tittle,Course_Code,Duration")] Course course)
         {
             if (ModelState.IsValid)
             {

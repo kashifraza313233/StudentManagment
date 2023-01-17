@@ -8,19 +8,19 @@ using System.Web;
 using System.Web.Mvc;
 using SMS.WebApp.Models;
 
-namespace SMS.WebApp.Controllers
+namespace SMS.WebApp.Content
 {
-    public class BatchesController : Controller
+    public class BatchController : Controller
     {
-        private StudentManagmentSystemEntities db = new StudentManagmentSystemEntities();
+        private StudentManagmentSystemEntities2 db = new StudentManagmentSystemEntities2();
 
-        // GET: Batches
+        // GET: Batch
         public ActionResult Index()
         {
             return View(db.Batches.ToList());
         }
 
-        // GET: Batches/Details/5
+        // GET: Batch/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace SMS.WebApp.Controllers
             return View(batch);
         }
 
-        // GET: Batches/Create
+        // GET: Batch/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Batches/Create
+        // POST: Batch/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace SMS.WebApp.Controllers
             return View(batch);
         }
 
-        // GET: Batches/Edit/5
+        // GET: Batch/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace SMS.WebApp.Controllers
             return View(batch);
         }
 
-        // POST: Batches/Edit/5
+        // POST: Batch/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace SMS.WebApp.Controllers
             return View(batch);
         }
 
-        // GET: Batches/Delete/5
+        // GET: Batch/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace SMS.WebApp.Controllers
             return View(batch);
         }
 
-        // POST: Batches/Delete/5
+        // POST: Batch/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

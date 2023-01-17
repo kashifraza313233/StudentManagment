@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Techlift_Contour Software\WEN22WE- Web Engineering - .Net\StudentManagmentSystem\Project\StudentManagment\StudentManagmentSystem\SMS.WebApp\Models\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Techlift_Contour Software\WEN22WE- Web Engineering - .Net\StudentManagmentSystem\Project\StudentManagment\StudentManagmentSystem\SMS.WebApp\Models\SMS.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

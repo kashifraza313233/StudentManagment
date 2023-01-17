@@ -13,10 +13,10 @@ namespace SMS.WebApp.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StudentManagmentSystemEntities : DbContext
+    public partial class StudentManagmentSystemEntities2 : DbContext
     {
-        public StudentManagmentSystemEntities()
-            : base("name=StudentManagmentSystemEntities")
+        public StudentManagmentSystemEntities2()
+            : base("name=StudentManagmentSystemEntities2")
         {
         }
     

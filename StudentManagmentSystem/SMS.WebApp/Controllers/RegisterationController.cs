@@ -10,18 +10,18 @@ using SMS.WebApp.Models;
 
 namespace SMS.WebApp.Controllers
 {
-    public class RegisterationsController : Controller
+    public class RegisterationController : Controller
     {
-        private StudentManagmentSystemEntities db = new StudentManagmentSystemEntities();
+        private StudentManagmentSystemEntities2 db = new StudentManagmentSystemEntities2();
 
-        // GET: Registerations
+        // GET: Registeration
         public ActionResult Index()
         {
             var registerations = db.Registerations.Include(r => r.Batch).Include(r => r.Course);
             return View(registerations.ToList());
         }
 
-        // GET: Registerations/Details/5
+        // GET: Registeration/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,15 +36,15 @@ namespace SMS.WebApp.Controllers
             return View(registeration);
         }
 
-        // GET: Registerations/Create
+        // GET: Registeration/Create
         public ActionResult Create()
         {
             ViewBag.Batch_Id = new SelectList(db.Batches, "BId", "Batch1");
-            ViewBag.Course_Id = new SelectList(db.Courses, "CId", "Course1");
+            ViewBag.Course_Id = new SelectList(db.Courses, "CId", "Course_Tittle");
             return View();
         }
 
-        // POST: Registerations/Create
+        // POST: Registeration/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,11 +59,11 @@ namespace SMS.WebApp.Controllers
             }
 
             ViewBag.Batch_Id = new SelectList(db.Batches, "BId", "Batch1", registeration.Batch_Id);
-            ViewBag.Course_Id = new SelectList(db.Courses, "CId", "Course1", registeration.Course_Id);
+            ViewBag.Course_Id = new SelectList(db.Courses, "CId", "Course_Tittle", registeration.Course_Id);
             return View(registeration);
         }
 
-        // GET: Registerations/Edit/5
+        // GET: Registeration/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,11 +76,11 @@ namespace SMS.WebApp.Controllers
                 return HttpNotFound();
             }
             ViewBag.Batch_Id = new SelectList(db.Batches, "BId", "Batch1", registeration.Batch_Id);
-            ViewBag.Course_Id = new SelectList(db.Courses, "CId", "Course1", registeration.Course_Id);
+            ViewBag.Course_Id = new SelectList(db.Courses, "CId", "Course_Tittle", registeration.Course_Id);
             return View(registeration);
         }
 
-        // POST: Registerations/Edit/5
+        // POST: Registeration/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -94,11 +94,11 @@ namespace SMS.WebApp.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.Batch_Id = new SelectList(db.Batches, "BId", "Batch1", registeration.Batch_Id);
-            ViewBag.Course_Id = new SelectList(db.Courses, "CId", "Course1", registeration.Course_Id);
+            ViewBag.Course_Id = new SelectList(db.Courses, "CId", "Course_Tittle", registeration.Course_Id);
             return View(registeration);
         }
 
-        // GET: Registerations/Delete/5
+        // GET: Registeration/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,7 +113,7 @@ namespace SMS.WebApp.Controllers
             return View(registeration);
         }
 
-        // POST: Registerations/Delete/5
+        // POST: Registeration/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -11,8 +11,7 @@ namespace SMS.WebApp.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Batch
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,11 +19,9 @@ namespace SMS.WebApp.Models
         {
             this.Registerations = new HashSet<Registeration>();
         }
-         
+    
         public int BId { get; set; }
-        [Required]
         public string Batch1 { get; set; }
-        [Required]
         public string Year { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

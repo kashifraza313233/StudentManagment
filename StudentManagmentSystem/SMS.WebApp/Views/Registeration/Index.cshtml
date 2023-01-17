@@ -4,12 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Student Registeration </h2>
+<h2>Students Records</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create","", new { @class = "btn btn-primary" })
 </p>
-<table class="table">
+<table class="table table-bordered table-hover table-responsive">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.First_Name)
@@ -30,7 +30,7 @@
             @Html.DisplayNameFor(model => model.Batch.Batch1)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Course.Course1)
+            @Html.DisplayNameFor(model => model.Course.Course_Tittle)
         </th>
         <th></th>
     </tr>
@@ -56,7 +56,7 @@
             @Html.DisplayFor(modelItem => item.Batch.Batch1)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Course.Course1)
+            @Html.DisplayFor(modelItem => item.Course.Course_Tittle)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
