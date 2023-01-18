@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.BId }, new {@class="btn btn-primary"}) |
+            @Html.ActionLink("Details", "Details", new { id=item.BId }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BId }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

@@ -11,7 +11,8 @@ namespace SMS.WebApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Course
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,10 +20,13 @@ namespace SMS.WebApp.Models
         {
             this.Registerations = new HashSet<Registeration>();
         }
-    
+        [Key]
         public int CId { get; set; }
+        [Required]
         public string Course_Tittle { get; set; }
+        [Required]
         public string Course_Code { get; set; }
+        [Required]
         public Nullable<int> Duration { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

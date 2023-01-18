@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.Duration)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.CId }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CId }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CId }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
